@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .slider {
+            display: flex;
+            width: calc(100% * 15);
+            animation: slide 20s linear infinite;
+        }
+
+        .slider img {
+            width: calc(100% / 15);
+            flex-shrink: 0;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">
+                <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">    <img src="./3d-render-modern-background-with-plexus-design_1048-14881.avif" alt="Image 1">
+           
+        </div>
+    </div>
+</body>
+</html>
