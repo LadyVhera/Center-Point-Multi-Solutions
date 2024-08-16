@@ -1,0 +1,578 @@
+:root {
+    --header-height: 50px;
+
+    /* ==========color=========== */
+    --first-color: #115e3e;
+    --first-color-light: #4c4c4c;
+    --first-color-lighter: #6d6e76;
+    --second-color: #4c4c4c;
+    --label-color: #bf3437;
+    --button-color-light: #fbf6ea;
+    --body-color-gray: #f4f4f4;
+    --body-color: #f4f0f8;
+    --tag-color: #592ea9;
+    --white: #ffffff;
+    --black: #000000;
+
+    /* ======fonts and typography====== */
+    --biggest-font-size: 56px;
+    --h1-font-size: 48px;
+    --h2-font-size: 40px;
+    --h3-font-size: 26px;
+    --h4-font-size: 24px;
+    --h5-font-size: 20px;
+    --btn-font-size: 18px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    /* ======Font weight    ====== */
+    --font-bold: 700;
+    --font-tag: 600;
+    --font-label: 500;
+    --font-regular: 400;
+    /* ======Padding====== */
+    --res-padding: 0px 20px;
+    --res-padding-header: 0px 10px;
+    --res-margin: 40px 0px;
+    --body-padding: 20px 30px;
+    --res-body-padding: 20px 20px;
+    --btn-padding: 16px 48px;
+    --res-btn-padding: 10px 30px;
+    /* =====Line Height====== */
+    --biggest-line-height: 68px;
+    --h1-line-height: 54px;
+    --h2-line-height: 48px;
+    --h3-line-height: 40px;
+    --h4-line-height: 32px;
+    --h6-line-height: 24px;
+    --normalBody-line-height: 28px;
+    --smallBody-line-height: 20px;
+
+    /* =======scroll===== */
+    --img-width: 250px;
+    --img-count: 9;
+    --duration: 20s;
+}
+
+/* ==========General Styles ========*/
+body {
+
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#button{
+    text-align: center;
+}
+
+
+/*============= Hero Section Styles ==============*/
+.hero {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assert/blog.avif') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 94, 62, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin: 60px auto;
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* ==================Featured Post Section ================*/
+.featured-post {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.featured-post .post {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    text-align: center;
+}
+
+.featured-post img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.featured-post .post-content {
+    flex: 1;
+}
+
+.featured-post h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2e8b57;
+}
+
+.featured-post p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #4d4d4d;
+}
+
+.featured-post .read-more {
+    background: #2e8b57;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.post .post-content{
+    width: 70%;
+}
+.featured-post .read-more:hover {
+    background: #1a6e40;
+}
+
+/*============== Latest Posts Section ============*/
+.latest-posts {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.latest-posts h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--first-color);
+}
+
+.latest-posts .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.latest-posts .post-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.latest-posts .post-card:hover {
+    transform: translateY(-10px);
+}
+
+.latest-posts img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.latest-posts h3 {
+    font-size: 1.5rem;
+        line-height: var(--h4-line-height) !important;
+
+    margin-bottom: 10px;
+    color: #2e8b57;
+}
+
+.latest-posts p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #4d4d4d;
+}
+
+.latest-posts .read-more {
+    background: #2e8b57;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.latest-posts .read-more:hover {
+    background: #1a6e40;
+}
+
+/* Categories Section */
+.categories {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.categories h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--first-color);
+}
+
+.categories .category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.categories .category {
+    background-color: #2e8b57;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.categories .category:hover {
+    background-color: #1a6e40;
+}
+
+/* ===========Search Bar Section ===============*/
+.search-bar {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar button {
+    background-color: #2e8b57;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #1a6e40;
+}
+
+/*=============Newsletter Signup Section =============*/
+.newsletter {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+    color: var(--first-color);
+}
+
+.newsletter p {
+    width: 50%;
+    margin: 20px auto;
+    color: #4d4d4d;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter button {
+    background-color: #2e8b57;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.newsletter button:hover {
+    background-color: #1a6e40;
+}
+
+/*============ Popular Tags Section============ */
+.tags {
+    margin-top: 50px;
+    padding: 40px 0;
+    background-color: #f0f0f0;
+    margin-bottom: 100px;
+}
+
+.tags h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--first-color);
+}
+
+.tags .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tags .tag {
+    background-color: #2e8b57;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.tags .tag:hover {
+    background-color: #1a6e40;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 450px) {
+    .hero {
+        height: 400px;
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .hero h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+/* ===============Featured Post Section =============*/
+.featured-post {
+    margin-top: 60px;
+    padding:  10px 0;
+    background-color: #f0f0f0;
+}
+
+.featured-post .post {
+    padding: 3px;
+}
+
+.post .post-content{
+    width: 100%;
+}
+
+.featured-post .read-more {
+    margin-bottom: 30px;
+}
+
+/*=============Newsletter Signup Section =============*/
+
+.newsletter {
+    padding: 0;
+}
+
+.newsletter p {
+    width: 100%;
+    margin: 20px auto;
+    color: #4d4d4d;
+}
+    .search-bar input,
+    .search-bar button,
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tags .tag {
+        font-size: 0.7rem;
+        padding: 8px 15px;
+    }
+
+    .author-bio img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .author-bio h3 {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+@media (min-width: 451px) and (max-width: 801px) {
+
+    .hero {
+        height: 450px;
+        padding: 75px 0;
+    }
+
+    .hero-content {
+        width: 80%;
+        margin: 20px auto;
+        padding: 5px;
+    }
+
+    .hero h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        line-height: var(--h3-line-height);
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .post-grid .none{
+        display: block;
+    }
+
+    .post .post-content{
+    width: 90%;
+}
+
+    /* ===========Search Bar Section ===============*/
+    .search-bar input,
+    .newsletter input {
+        max-width: 50%;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        max-width: 50%;
+    }
+
+
+.search-bar button {
+    padding: var(--res-btn-padding);
+}
+
+/*=============Newsletter Signup Section =============*/
+
+.newsletter p {
+    width: 80%;
+    margin: 20px auto;
+    color: #4d4d4d;
+}
+
+    .tags .tag {
+        font-size: 0.8rem;
+    }
+    .latest-posts .post-card {
+        padding: 15px;
+    }
+}
+
+
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+    .hero {
+        height: 450px;
+        padding: 75px 0;
+    }
+
+    .hero-content {
+        width: 70%;
+        margin: 20px auto;
+        padding: 5px;
+    }
+
+    .hero h2 {
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        line-height: var(--h3-line-height);
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .featured-post .post {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .post .post-content{
+    width: 90%;
+}
+
+    .latest-posts .post-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+      .post-grid .none{
+        display: none;
+    }
+
+
+    /* ===========Search Bar Section ===============*/
+    .search-bar input,
+    .newsletter input {
+        max-width: 60%;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1334px) {
+    .container {
+        padding: 0 15px;
+    }
+}

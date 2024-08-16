@@ -91,6 +91,10 @@ a {
   color: black;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -139,6 +143,11 @@ a.button {
   display: inline-block;
 }
 
+.hero-btn{
+  background-color: var(--white) !important;
+  color: #005700 !important;
+}
+
 .body-label {
   color: var(--first-color);
   font-size: var(--small-font-size);
@@ -168,19 +177,15 @@ nav ul {
   padding: 10px 15px;
 }
 
-.nav-logo {
-  color: var(--first-color);
-  font-weight: var(--font-bold);
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  background-color: var(--white-color) !important;
-}
-
 .nav-logo-image {
-  width: 60px;
+  object-position: center;
+  object-fit: contain;
+  width: 180px;
 }
 
+.main-nav .nav-logo-image {
+    margin-left: -20px;
+  }
 nav li {
   height: var(--header-height);
 }
@@ -252,6 +257,157 @@ nav li:first-child {
 
 .none {
   display: none;
+}
+
+
+/* ============Testimonials-Section============= */
+
+.testimonial-box {
+  margin-top: 50px;
+  background-image: url(./assert/testi-bg.jpg);
+  padding: 30px;
+}
+
+.testimonial-section {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-text {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.testimonial-text h3 {
+  text-align: center;
+}
+.testimonial-text h2 {
+  margin-bottom: 10px;
+  color: var(--first-color);
+}
+
+.testimonial-slider {
+  width: 70%;
+  margin: auto;
+  display: none;
+  transition: all 0.9s ease;
+}
+
+.testimonial-slider.active {
+  display: block;
+}
+
+.testimonial-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 70px;
+}
+
+.testimonial-slider p {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-top: 5px;
+}
+
+.testimonial-author span {
+  font-weight: bold;
+  color: #555;
+  font-size: var(--small-font-size);
+}
+
+.testimonial-author h3 {
+  text-align: center;
+  color: var(--black);
+}
+
+.star-rating {
+  color: var(--label-color);
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+.dash {
+  margin-top: 20px;
+}
+
+.image-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.image-thumbnails img {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.image-thumbnails img:hover {
+  transform: scale(1.1);
+}
+
+.image-thumbnails img.active {
+  border: 5px solid var(--first-color);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px;
+
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: -100px;
+  background-color: #c7bfbf;
+}
+
+.arrow.right {
+  right: -100px;
+  background-color: var(--first-color);
+
+}
+
+/* =============Join-Team-Section============ */
+
+.join-team-section {
+  margin-top: 30px;
+}
+
+.join-team-box {
+   text-align: center;
+  margin: auto;
+  width: 45%;
+  padding: var(--body-padding);
+}
+
+.join-team-box * {
+  margin-top: 25px;
+}
+
+.join-team-box h2{
+  color: var(--first-color);
+}
+
+.join-team-box p{
+  color: rgb(80, 78, 78);
+}
+.join-team-box a{
+  margin-top: 30px;
 }
 
 /* ==============Sroll================ */
@@ -431,17 +587,80 @@ footer h3 {
     background-color: var(--white);
     color: var(--first-color);
   }
-
-  .nav-logo {
-    font-size: var(--h5-font-size);
-  }
+  
 
 
   .nav-close a {
     padding: 0px;
     color: var(--white);
   }
+   /* ============Testimonials-Section============= */
+  .testimonial-box {
+    margin-top: 5rem !important;
+    width: 100%;
+    display: block;
+    padding-top: 25px;
+  }
 
+  .testimonial-section {
+    width: 100%;
+  }
+
+  .testimonial-text {
+    width: 100% !important;
+  }
+
+  .testimonial-text h3 {
+    margin-bottom: 8px !important;
+  }
+
+  .testimonial-slider {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-slider p {
+    margin-top: -30px;
+    width: 100%;
+  }
+
+  .star-rating {
+    margin-top: 20px;
+  }
+
+  .image-thumbnails img {
+    width: 80px;
+    height: 80px;
+    margin-top: -15px !important;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .testimonial-author span {
+    font-size: 14px;
+  }
+
+ /* ==========Featured Section============= */
+  .featured-section .flex {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .featured-section img {
+    padding: 20px;
+  }
+   .featured-section .flex {
+    display: block !important;
+  }
+/* =============Join-Team-Section============ */
+.join-team-box {
+  margin-top:-30px;
+  width:100%;
+  padding: var(--res-body-padding);
+}
   /*=============Footer-Section============ */
   footer{
     padding: 10px;
@@ -504,10 +723,7 @@ footer h3 {
     font-weight: lighter !important;
   }
 
-  .nav-logo {
-    width: 100px;
-    font-size: 14px !important;
-  }
+  
 }
 
 /* ===============Max-Width: 800px================== */
@@ -536,15 +752,83 @@ footer h3 {
     color: var(--first-color);
   }
 
-  .nav-logo {
-    font-size: var(--h5-font-size);
-  }
 
   .nav-close a {
     padding: 0px;
     color: var(--white);
   }
 
+  .main-nav .nav-logo-image {
+    margin-left: -30px;
+  }
+   /* ==========Testimonials-Section=============== */
+
+    .testimonial-section{
+      width: 100%;
+    }
+
+    .testimonial-text h3 {
+       line-height: var(--h4-line-height);
+    }
+
+    .testimonial-slider {
+        padding: 15px;
+    }
+.testimonial-slider p{
+  width: 80%;
+  margin: auto;
+}
+    .testimonial-text{
+      width: 100%;
+    }
+    .star-rating {
+        font-size: 20px;
+    }
+.image-thumbnails img{
+  margin-top: -10px !important;
+  margin-bottom: -30px !important;
+}
+    .image-thumbnails .none{
+      display: block;
+    }
+    .arrow.left {
+  left: -20px;
+}
+
+.arrow.right {
+  right: -20px;
+  background-color: var(--first-color);
+
+}
+
+ /* ==========Featured Section============= */
+  .featured-section .flex {
+    display: block;
+  }
+
+  .featured-section div:not([class]) {
+    margin-bottom: 30px;
+  }
+
+  .featured-section .logos {
+    padding: var(--body-padding);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+  }
+
+  .excape,
+  .logos .none {
+    display: block;
+  }
+
+  /* =============Join-Team-Section============ */
+.join-team-box {
+  margin: auto;
+  width: 85%;
+  padding: var(--res-body-padding);
+}
+  
   /*=============Footer-Section============ */
   footer .inbox,
   footer .address {
@@ -604,9 +888,7 @@ footer h3 {
     font-weight: lighter !important;
   }
 
-  .nav-logo {
-    width: 100px;
-  }
+  
 }
 
 @media (min-width: 801px) and (max-width: 1024px) {
@@ -618,20 +900,71 @@ footer h3 {
   .sidebar, .inner-style {
     display: none !important;
   }
-
-  .nav-logo {
-    font-size: var(--h4-font-size);
+  
+  .hide{
+    display: none;
   }
-
   nav a {
     padding: 0 20px;
   }
 
-  .nav-logo {
-    width: 100px;
-    font-size: 14px !important;
+  .main-nav .nav-logo-image {
+    margin-left: -30px;
   }
 
+   /* ==========Featured Section============= */
+   
+  .featured-section .flex {
+    display: block;
+  }
+
+  .featured-section div:not([class]) {
+    margin-bottom: 30px;
+  }
+
+  .featured-section .logos {
+    padding: var(--body-padding);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+  }
+
+  .none,
+  .excape {
+    display: block;
+  }
+
+   /* ===========Testimonials-Section========== */
+.testimonial-section{
+  width: 85%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.testimonial-text {
+  width: 100% !important;
+   margin:0 !important;
+}
+  .testimonial-text h3 {
+    font-size: var(--h3-font-size) !important;
+  }
+
+  .testimonial-slider{
+    width: 100%;
+  }
+  .arrow.left {
+  left: -80px;
+}
+
+.arrow.right {
+  right: -80px;
+}
+/* =============Join-Team-Section============ */
+.join-team-box {
+  width: 70%;
+  padding: var(--body-padding);
+}
+ 
   /* =========Footer-Section=========== */
   .inbox h2 {
     font-size: var(--h5-font-size);
@@ -661,12 +994,16 @@ footer h3 {
     display: none !important;
   }
 
-  .nav-logo {
-    width: 100px;
-  }
-
   .inbox {
     padding: 30px 50px;
     gap: 3rem;
   }
+   /* ==========Featured Section============= */
+    .featured-section .logos * {
+    padding: var(--body-padding);
+  }
+  /* =============Join-Team-Section============ */
+.join-team-box {
+  width: 70%;
+}
 }

@@ -1,0 +1,372 @@
+.hero-section *,
+.about-us-discription * {
+  margin-top: 10px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--body-padding);
+  margin-top: 20px;
+  line-height: var(--normalBody-line-height);
+}
+
+.hero-section .hero-description {
+  margin-top: 80px;
+}
+
+.hero-section-text {
+  width: 40%;
+  padding: 40px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.hero-description {
+  width: 40%;
+}
+
+.image-section {
+  padding: var(--body-padding);
+  margin-top: -80px;
+}
+
+.image-box {
+  background-color: var(--body-color);
+}
+
+.social-image-overlay {
+  margin-top: -150px;
+  position: absolute;
+  margin-left: 70px;
+  z-index: 1;
+}
+
+.social-count {
+  display: flex;
+  background-color: #ffd050;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+  padding: 20px;
+}
+
+.about-us-section {
+  background-color: var(--body-color);
+}
+
+.about-us-discription {
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0px 80px;
+  padding-bottom: 50px;
+  gap: 20px;
+}
+
+.mission-text p,
+.vision-text p {
+  color: gray;
+}
+
+/* =======Creatives-Section-Begins========== */
+.creative-section,
+.started-blog-section {
+  margin-top: 100px;
+  padding: var(--body-padding);
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.display-none-desktop {
+  display: none;
+}
+
+.creative-section-text,
+.started-blog-section-text {
+  margin: auto 40px;
+}
+
+/* =======Authors-Section-Begins========== */
+.authors-section {
+  padding: var(--body-padding);
+}
+
+.authors-section h2 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.author-section * {
+  margin-top: 7px;
+}
+
+.author-box {
+  margin-top: 80px;
+}
+
+.author-box h3,
+.author-box p {
+  text-align: center;
+}
+
+.author-box .author-img {
+  margin: auto;
+}
+
+.social-images {
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.author-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* =============Join-Team-Section============ */
+
+.join-team-section {
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.join-team-box {
+  align-self: center;
+  width: 480px;
+  padding: var(--body-padding);
+}
+
+.join-team-box * {
+  margin-top: 20px;
+}
+
+/* =================Media- Queries================ */
+/* ===============Max-Width 400px================= */
+@media (max-width: 400px) {
+  .hero-section {
+    display: block;
+    padding: var(--res-body-padding);
+  }
+
+  .hero-section-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-section .hero-description {
+    margin-top: 20px;
+  }
+
+  .social-image-overlay {
+    display: none;
+  }
+
+  .image-section {
+    padding: var(--res-body-padding);
+    margin-top: 0px;
+  }
+
+  .about-us-discription {
+    display: block;
+    padding: 0;
+  }
+
+  /* =======Creatives-Section-Begins========== */
+  .creative-section,
+  .started-blog-section {
+    padding: var(--res-body-padding);
+    margin-top: 50px;
+    display: block;
+  }
+
+  .display-none-desktop {
+    display: block;
+  }
+
+  .display-none-mobile {
+    display: none;
+  }
+
+  .creative-section-text,
+  .started-blog-section-text {
+    margin: auto 10px;
+  }
+
+  /* ========Authors-Section=========== */
+  .authors-section {
+    padding: var(--res-body-padding);
+  }
+
+  .author-section {
+    display: block;
+  }
+
+  .authors-section h2 {
+    text-align: start !important;
+  }
+
+  .author-box {
+    margin-top: 50px;
+  }
+}
+
+/* ===============Max-Width 800px============= */
+@media (max-width: 800px) {
+  .hero-description {
+    width: 100%;
+  }
+
+  .hero-section {
+    display: block;
+    padding: var(--res-body-padding);
+  }
+
+  .hero-section-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-section .hero-description {
+    margin-top: 20px;
+  }
+
+  .hero-description {
+    width: 100%;
+  }
+
+  .social-image-overlay {
+    display: none;
+  }
+
+  .social-count {
+    display: none;
+  }
+
+  .image-section {
+    padding: var(--res-body-padding);
+    margin-top: 0px;
+  }
+
+  .about-us-discription {
+    display: block;
+    padding: 0;
+  }
+
+  /* =======Creatives-Section-Begins========== */
+  .creative-section,
+  .started-blog-section {
+    padding: var(--res-body-padding);
+    margin-top: 50px;
+    display: block;
+  }
+
+  .display-none-desktop {
+    display: block;
+  }
+
+  .display-none-mobile {
+    display: none;
+  }
+
+  .creative-section-text,
+  .started-blog-section-text {
+    margin: auto 10px;
+  }
+
+  .creative-section-text *,
+  .started-blog-section-text * {
+    margin-top: 10px;
+  }
+
+  /* ========Authors-Section=========== */
+  .authors-section {
+    padding: var(--res-body-padding);
+  }
+
+  .authors-section h2 {
+    text-align: center !important;
+  }
+
+  .author-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========Min-Width 801px and Max-Width========== */
+@media (min-width: 801px) and (max-width: 1024px) {
+  .hero-section {
+    padding: var(--res-body-padding);
+  }
+
+  .hero-section .hero-description {
+    margin-top: 50px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .hero-section-text {
+    width: 60%;
+  }
+
+  .hero-description {
+    width: 40%;
+  }
+
+  .image-layer {
+    width: 90%;
+  }
+
+  .about-us-discription {
+    padding: 0px 60px;
+    padding-bottom: 50px;
+    gap: 40px;
+  }
+
+  /* =======Creatives-Section-Begins========== */
+  .creative-section,
+  .started-blog-section {
+    margin-top: 50px;
+    padding: var(--res-body-padding);
+  }
+
+  .started-blog-section img,
+  .display-none-mobile {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .started-blog-section-text,
+  .creative-section-text {
+    width: 50%;
+  }
+}
+
+/* =======Min-Width 801px and Max-Width============ */
+
+@media (min-width: 1025px) and (max-width: 1334px) {
+
+  /* =======Creatives-Section-Begins========== */
+  .started-blog-section img,
+  .display-none-mobile {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .started-blog-section-text,
+  .creative-section-text {
+    width: 50%;
+  }
+}
