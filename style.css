@@ -65,7 +65,9 @@
   padding: var(--btn-padding);
   border-radius: 10px;
 }
-
+.displayNone{
+  display: none;
+}
 /* =======Hero Section Ends========== */
 .blog-section {
   margin-top: 50px;
