@@ -38,7 +38,7 @@
   --res-padding-header: 0px 10px;
   --res-margin: 40px 0px;
   --body-padding: 20px 30px;
-  --res-body-padding: 20px 20px;
+  --res-body-padding: 20px;
   --btn-padding: 16px 48px;
   --res-btn-padding: 10px 30px;
   /* =====Line Height====== */
@@ -48,7 +48,7 @@
   --h3-line-height: 40px;
   --h4-line-height: 32px;
   --h6-line-height: 24px;
-  --normalBody-line-height: 28px;
+  --normalBody-line-height: 1.6;
   --smallBody-line-height: 20px;
 
   /* =======scroll===== */
@@ -362,12 +362,11 @@ nav li:first-child {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2em;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   color: var(--white);
   cursor: pointer;
-  padding: 10px;
-
+  padding: 5px;
   border-radius: 50%;
 }
 
@@ -411,6 +410,10 @@ nav li:first-child {
 }
 
 /* ==============Sroll================ */
+
+.featured-section{
+  padding: 30px;
+}
 .slider img {
   width: 250px;
   height: 150px;
@@ -424,7 +427,6 @@ nav li:first-child {
     background-color: #fff;
     padding: 20px;
     position: relative;
-    /* background-color: #115e3e; */
     border-radius: 5px;
 }
 

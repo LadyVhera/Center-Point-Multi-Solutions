@@ -1,0 +1,251 @@
+:root {
+    --header-height: 50px;
+
+    /* ==========color=========== */
+    --first-color: #115e3e;
+    --first-color-light: #4c4c4c;
+    --first-color-lighter: #6d6e76;
+    --second-color: #4c4c4c;
+    --label-color: #bf3437;
+    --button-color-light: #fbf6ea;
+    --body-color-gray: #f4f4f4;
+    --body-color: #f4f0f8;
+    --tag-color: #592ea9;
+    --white: #ffffff;
+    --black: #000000;
+
+    /* ======fonts and typography====== */
+    --biggest-font-size: 56px;
+    --h1-font-size: 48px;
+    --h2-font-size: 40px;
+    --h3-font-size: 26px;
+    --h4-font-size: 24px;
+    --h5-font-size: 20px;
+    --btn-font-size: 18px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    /* ======Font weight    ====== */
+    --font-bold: 700;
+    --font-tag: 600;
+    --font-label: 500;
+    --font-regular: 400;
+    /* ======Padding====== */
+    --res-padding: 0px 20px;
+    --res-padding-header: 0px 10px;
+    --res-margin: 40px 0px;
+    --body-padding: 20px 30px;
+    --res-body-padding: 20px;
+    --btn-padding: 16px 48px;
+    --res-btn-padding: 10px 30px;
+    /* =====Line Height====== */
+    --biggest-line-height: 68px;
+    --h1-line-height: 54px;
+    --h2-line-height: 48px;
+    --h3-line-height: 40px;
+    --h4-line-height: 32px;
+    --h6-line-height: 24px;
+    --normalBody-line-height: 1.6;
+    --smallBody-line-height: 20px;
+
+    /* =======scroll===== */
+    --img-width: 250px;
+    --img-count: 9;
+    --duration: 20s;
+}
+
+/*============= Hero Section Styles ==============*/
+.hero {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assert/book\ now3.jpeg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 94, 62, 0.85);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    width: 50%;
+    margin: 70px auto;
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    margin-bottom: 30px;
+}
+
+.hero p {
+    width: 50%;
+    margin: 30px auto;
+    font-size: 1.25rem;
+}
+
+.hero-content a {
+    margin-top: 30px;
+}
+
+/* =============Contact-info=========== */
+
+.booking-form-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    text-align: center;
+    color: var(--first-color);
+    margin-bottom: 30px;
+}
+
+.booking-form {
+    color: #115e3e;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--first-color);
+    outline: none;
+}
+
+.btn-submit {
+    padding: 15px;
+    background-color: var(--first-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-submit:hover {
+    text-decoration: underline;
+}
+
+.cta-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.cta-content h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--first-color);
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.cta-content a {
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+.cta-content a:hover {
+    text-decoration: underline;
+}
+
+/* ===========Responsiveness============= */
+@media (max-width: 450px) {
+    .hero {
+        height: 400px;
+        padding: 0px 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .hero h2 {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .hero p {
+        width: 100%;
+    }
+}
+@media (min-width: 451px) and (max-width: 801px) {
+
+    .hero {
+        height: 430px;
+        padding:  0;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 20px auto;
+        padding: 5px;
+    }
+
+    .hero h2 {
+        width: 100%;
+        margin-bottom: 20px;
+        line-height: var(--h3-line-height);
+    }
+
+    .hero p {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+
+}

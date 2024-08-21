@@ -1,130 +1,530 @@
+:root {
+  --header-height: 50px;
 
-/* Global Styles */
+  /* ==========color=========== */
+  --first-color: #115e3e;
+  --first-color-light: #4c4c4c;
+  --first-color-lighter: #6d6e76;
+  --second-color: #4c4c4c;
+  --label-color: #bf3437;
+  --button-color-light: #fbf6ea;
+  --body-color-gray: #f4f4f4;
+  --body-color: #f4f0f8;
+  --tag-color: #592ea9;
+  --white: #ffffff;
+  --black: #000000;
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    flex-wrap: wrap;
-    position: relative;
+  /* ======fonts and typography====== */
+  --biggest-font-size: 56px;
+  --h1-font-size: 48px;
+  --h2-font-size: 40px;
+  --h3-font-size: 26px;
+  --h4-font-size: 24px;
+  --h5-font-size: 20px;
+  --btn-font-size: 18px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  /* ======Font weight    ====== */
+  --font-bold: 700;
+  --font-tag: 600;
+  --font-label: 500;
+  --font-regular: 400;
+  /* ======Padding====== */
+  --res-padding: 0px 20px;
+  --res-padding-header: 0px 10px;
+  --res-margin: 40px 0px;
+  --body-padding: 20px 30px;
+  --res-body-padding: 20px 20px;
+  --btn-padding: 16px 48px;
+  --res-btn-padding: 10px 30px;
+  /* =====Line Height====== */
+  --biggest-line-height: 68px;
+  --h1-line-height: 54px;
+  --h2-line-height: 48px;
+  --h3-line-height: 40px;
+  --h4-line-height: 32px;
+  --h6-line-height: 24px;
+  --normalBody-line-height: 28px;
+  --smallBody-line-height: 20px;
+
+  /* =======scroll===== */
+  --img-width: 250px;
+  --img-count: 9;
+  --duration: 20s;
+}
+
+.displayOnMobile {
+  display: none;
 }
 
 /*=========== Hero Section ===========*/
 
 .hero {
-    position: relative;
-    height: 550px;
-    overflow: hidden;
-    color: #fff;
+  position: relative;
+  height: 540px;
+  overflow: hidden;
+  color: #fff;
 }
 
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./assert/blog.avif') no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("./assert/about\ us\ page2.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(17, 94, 62, 0.7);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 94, 62, 0.8);
+  z-index: 1;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    width: 50%;
-    margin: 60px auto;
-    color: var(--white);
-    text-align: center;
-    padding: 50px 20px;
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  margin: 70px auto;
+  color: var(--white);
+  text-align: center;
+  padding: 10px;
 }
 
+.hero-content * {
+  margin-top: 30px;
+}
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero-content h2 {
+  font-size: 57px;
+  line-height: var(--biggest-line-height);
+  margin-bottom: 30px;
 }
 
 .hero p {
-    font-size: 1.5rem;
+  font-size: 1.22rem;
+  width: 70%;
+  margin: 10px auto;
+  color: rgb(224, 219, 219);
 }
 
-/* Section Styles */
+/* ==========Section Styles -===========*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7rem;
+  padding: 50px;
+    align-items: center;
+}
+
+.container img {
+  border-radius: 10px;
+  object-fit: fill;
+  object-position: center;
+  width: 100%;
+}
+
 .content {
-    max-width: 600px;
-    margin-left: 40px;
+  max-width: 600px;
 }
 
 .content h2 {
-    margin-bottom: 20px;
+  margin-bottom: 5px;
+  color: var(--first-color);
 }
 
-.content p, .content ul {
-    line-height: 1.6;
+.content p,
+.content ul {
+  line-height: 1.6;
 }
 
 .content ul {
-    list-style: disc;
-    padding-left: 20px;
+  list-style: disc;
+  padding-left: 20px;
 }
 
-/* Slide Animations */
+/*======= Commitment Styles============ */
+.commitment {
+  margin-top: 40px;
+  padding: 70px 0;
+  background-color: #f5f5f5;
+}
+
+.commitment-section {
+  display: flex;
+  justify-content: center;
+}
+
+.commitment-item {
+  display: flex;
+  padding: 10px;
+  width: 50%;
+  gap: 1rem;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+.commitment-item p {
+  color: rgb(110, 107, 107);
+}
+.commitment-item i {
+  font-size: 48px;
+  color: var(--first-color);
+  margin-bottom: 20px;
+}
+
+.commitment-item h2 {
+  margin-bottom: 10px;
+  color: var(--first-color);
+}
+
+/* =========Why Us Styles============ */
+.why-us {
+  margin-top: 20px;
+  padding: 30px 0px;
+  margin-bottom: -30px;
+  background-color: #f5f5f5;
+}
+.why-us h2 {
+  color: var(--first-color);
+  text-align: center;
+  text-transform: capitalize;
+}
+.why-us-section {
+  margin: 70px auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.why-us-item {
+  padding: 40px;
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.8s ease, transform 0.8s ease;
+}
+
+.why-us-item i {
+  font-size: 48px;
+  color: var(--first-color);
+  margin-bottom: 20px;
+}
+
+.why-us-item h3 {
+  margin-bottom: 10px;
+  color: var(--first-color);
+}
+
+.why-us-item:hover {
+  border: 2px solid var(--first-color);
+  transform: translateY(-10px);
+}
+
 .slide-left {
-    animation: slide-left 1s ease-out;
+  animation: slide-left 2s ease-out;
 }
 
 .slide-right {
-    animation: slide-right 1s ease-out;
+  animation: slide-right 2s ease-out;
 }
 
 @keyframes slide-left {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide-right {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
+/* ==============Resposivness================== */
+@media (max-width: 450px) {
+
+  .slide-left{
+    display: none;
+  }
+  .hero {
+    height: 400px;
+    padding: 20px 0;
+  }
+
+  .hero-content {
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+  }
+
+  .hero h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .displayOnMobile {
+  animation: slide-left 2s ease-out;
+}
+
+
+
+@keyframes displayOnMobile {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+  /* =============/* Section Styles =========*/
+
+  .displayOnMobile {
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+  .container {
+    display: block;
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+  }
+  .about-company, .vision-mission{
+    margin-top: 30px;
+  }
+
+  /*======= Commitment Styles============ */
+  .commitment {
+    overflow: hidden;
+    padding: 5px 0;
+    background-color: #f5f5f5;
+    margin-bottom: 50px;
+  }
+
+  .commitment-section {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .commitment-item {
+    display: block;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  /* =========Why Us Styles============ */
+
+  .why-us {
+    margin-top: 20px;
+    padding: 30px 10px;
+    margin-bottom: -50px;
+    background-color: #f5f5f5;
+  }
+
+  .why-us-section {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .why-us h2 {
+    text-align: start;
+  }
+
+  .why-us-item {
+    padding: 10px;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.8s ease, transform 0.8s ease;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 800px) {
+
+    h2{
+        font-size: 38px;
+    }
+  .hero {
+    height: 430px;
+    padding: 15px 0;
+  }
+
+  .hero-content {
+    margin-top: 40p;
+    padding: 5px;
+    width: 80%;
+  }
+
+  .hero h2 {
+     width: 90%;
+     margin: 20px auto;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: var(--h3-line-height);
+  }
+
+  .hero p {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  /* ==========Section Styles -===========*/
+
+  .displayOnMobile {
+    display: inline-block;
+  }
+  img {
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+  }
+  .container {
+    display: block;
+    padding: var(--res-body-padding);
+  }
+
+  .content {
+    margin-top: 10px;
+   max-width: 100% !important;
+  }
+/* ========Commitment Section======== */
+
+.commitment {
+  padding: 30px 0;
+  margin-bottom: 40px;
+}
+
+.commitment-item {
+  display: block;
+}
+
+  /* =========Why Us Styles============ */
+
+  .why-us {
+    margin-top: 20px;
+    padding: 30px 10px;
+    margin-bottom: -50px;
+    background-color: #f5f5f5;
+  }
+
+  .why-us-section {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .why-us h2 {
+    text-align: start;
+  }
+
+  .why-us-item {
+    padding: 10px;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.8s ease, transform 0.8s ease;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+h2:not(.hero-content h2){
+    font-size: 33px;
+}
+    
+    .hero {
+        height: 450px;
+        padding: 10px 0;
     }
 
-    .content {
-        margin: 20px 0;
-        text-align: left;
+    .hero h2 {
+         width: 100%;
+       margin: 20px auto;
+        font-size: 2.5rem;
+        line-height: var(--h3-line-height);
+    }
+    
+.hero p {
+        width: 100%;
     }
 
-    .slide-left, .slide-right {
-        animation: none;
-    }
+    /* ==========Section Styles -===========*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: var(--res-body-padding);
+  margin-top: 40px;
+}
+
+.content {
+  max-width: 100%;
+}
+/*======= Commitment Styles============ */
+
+.commitment-item {
+  display: block;
+}
+
+
+/* =========Why Us Styles============ */
+
+.why-us {
+  margin-top: 50px;
+  margin-bottom: -10px;
+}
+
+
+.why-us-section {
+  margin: 40px auto;
+  gap: 1rem;
+}
+
+.why-us-item {
+  padding: 20px 10px;
+}
+.join-team-box{
+    width: 60%;
+}
+
+}
+
+@media (min-width: 1025px) and (max-width: 1334px) {
 }

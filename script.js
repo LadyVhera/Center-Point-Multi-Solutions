@@ -76,3 +76,47 @@ function step(timestamp) {
 
 // Start the animation
 window.requestAnimationFrame(step);
+
+// ===========Book Now Page
+        document.addEventListener("DOMContentLoaded", () => {
+          const form = document.querySelector(".booking-form");
+
+          form.addEventListener("submit", (event) => {
+            event.preventDe
+        document.addEventListener("DOMContentLoaded", () => {
+          const form = document.querySelector(".booking-form");
+
+          form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent form from submitting immediately
+
+            // Form validation logic
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+
+            if (name === "" || email === "" || phone === "") {
+              alert("Please fill in all required fields.");
+              return;
+            }
+
+            // Submit the form (could add AJAX here for a real-world app)
+            alert("Thank you for booking! We will contact you soon.");
+            form.submit(); // Uncomment this when ready to submit the form
+          });
+        });fault(); // Prevent form from submitting immediately
+
+            // Form validation logic
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+
+            if (name === "" || email === "" || phone === "") {
+              alert("Please fill in all required fields.");
+              return;
+            }
+
+            // Submit the form (could add AJAX here for a real-world app)
+            alert("Thank you for booking! We will contact you soon.");
+            form.submit(); // Uncomment this when ready to submit the form
+          });
+        });
